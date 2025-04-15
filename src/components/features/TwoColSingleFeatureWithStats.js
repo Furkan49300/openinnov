@@ -32,20 +32,20 @@ export default ({textOnLeft = false}) => {
   //Change the statistics variable as you like, add or delete objects
   const statistics = [
     {
-      key: "Countries",
-      value: "192",
+      key: "Evènements",
+      value: "150",
     },
     {
-      key: "Hotels",
-      value: "479",
+      key: "Clubs partenaires",
+      value: "350",
     },
     {
-      key: "Rooms",
-      value: "2093",
+      key: "Utilisateurs actifs",
+      value: "1200",
     },
     {
-      key: "Workers",
-      value: "10347",
+      key: "Sports disponibles",
+      value: "85",
     }
   ]
 
@@ -57,8 +57,8 @@ export default ({textOnLeft = false}) => {
         </ImageColumn>
         <TextColumn textOnLeft={textOnLeft}>
           <TextContent>
-            <Heading>We have the best service.</Heading>
-            <Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</Description>
+            <Heading>Nous offrons la meilleure expérience sportive.</Heading>
+            <Description>Découvrez une application révolutionnaire pour tous les amateurs de sport. Rejoignez une communauté dynamique, trouvez des partenaires d'entraînement, et participez à des événements sportifs près de chez vous. Avec des outils personnalisés pour progresser, notre plateforme vous accompagne dans l’atteinte de vos objectifs, quel que soit votre niveau.</Description>
             <Statistics>
               {statistics.map((statistic, index) => (
               <Statistic key={index}>

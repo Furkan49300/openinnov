@@ -54,24 +54,24 @@ export default ({
   cards = [
     {
       imageSrc: ShieldIconImage,
-      title: "Secure",
-      description: "We strictly only deal with vendors that provide top notch security.",
+      title: "Securité",
+      description: "Nous garantissons la sécurité de tes données et de tes événements. Nos outils de vérification et de modération te permettent de participer en toute confiance à des sorties sportives.",
       url: "https://timerse.com"
     },
     {
       imageSrc: SupportIconImage,
       title: "24/7 Support",
-      description: "Lorem ipsum donor amet siti ceali placeholder text",
+      description: "Besoin d’aide pour organiser un match ou une randonnée ? Notre équipe est disponible 24h/24, 7j/7 pour répondre à tes questions et te guider.",
       url: "https://google.com"
     },
     {
       imageSrc: CustomizeIconImage,
       title: "Customizable",
-      description: "Lorem ipsum donor amet siti ceali placeholder text",
+      description: "Personnalise tes événements sportifs à ta guise : choisis le lieu, la date, le niveau, et même les équipements pour des activités sur mesure.",
       url: "https://reddit.com"
     }
   ],
-  linkText = "Learn More",
+  linkText = "En savoir plus",
   heading = "",
   subheading = "",
   description = "",

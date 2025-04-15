@@ -2,6 +2,7 @@ import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
+import CyclisteImage from "../../images/cycliste.jpg";
 
 import Header, { LogoLink, NavLinks, NavLink as NavLinkBase } from "../headers/light.js";
 
@@ -20,7 +21,7 @@ const Container = tw.div`relative -mx-8 -mt-8`;
 const TwoColumn = tw.div`flex flex-col lg:flex-row bg-gray-100`;
 const LeftColumn = tw.div`ml-8 mr-8 xl:pl-10 py-8`;
 const RightColumn = styled.div`
-  background-image: url("https://images.unsplash.com/photo-1551918120-9739cb430c6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&width=1440&height=1024&q=75");
+  background-image: url(${CyclisteImage});
   ${tw`bg-green-500 bg-cover bg-center xl:ml-24 h-96 lg:h-auto lg:w-1/2 lg:flex-1`}
 `;
 
@@ -44,25 +45,25 @@ const Actions = styled.div`
 export default ({
   navLinks = [
     <NavLinks key={1}>
-      <NavLink href="#">About</NavLink>
-      <NavLink href="#">Blog</NavLink>
-      <NavLink href="#">Pricing</NavLink>
-      <NavLink href="#">Login</NavLink>
+      <NavLink href="#">Accueil</NavLink>
+      <NavLink href="#">Activités</NavLink>
+      <NavLink href="#">FAQ</NavLink>
+      <NavLink href="#">Se connecter</NavLink>
     </NavLinks>
   ],
   heading = (
     <>
-      Find Perfect Hotels
+      Bienvenue sur SportConnect
       <wbr />
       <br />
-      <span tw="text-primary-500">anywhere you go.</span>
+      <span tw="text-primary-500">Activités Sportives <br></br>Près de Chez Vous.</span>
     </>
   ),
-  description = "We've been in the hotels business across the world for 5 years now. We assure you that you will always enjoy your stay with us.",
+  description = "Vous cherchez des partenaires pour une partie de foot improvisée ? Envie de découvrir de nouveaux parcours de randonnée ou de rouler avec d’autres passionnés de cyclisme ? SportConnect est la plateforme idéale pour organiser et participer à des événements sportifs en toute simplicité.",
   primaryActionUrl = "#",
-  primaryActionText = "Sign Up",
-  secondaryActionUrl = "#",
-  secondaryActionText = "Search Hotels"
+  primaryActionText = "Se connecter",
+  secondaryActionUrl = "#activites",
+  secondaryActionText = "Chercher des activités"
 }) => {
   return (
     <Container>

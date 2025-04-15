@@ -10,6 +10,8 @@ import { ReactComponent as StarIcon } from "feather-icons/dist/icons/star.svg";
 import { ReactComponent as ChevronLeftIcon } from "feather-icons/dist/icons/chevron-left.svg";
 import { ReactComponent as ChevronRightIcon } from "feather-icons/dist/icons/chevron-right.svg";
 
+
+
 const Container = tw.div`relative`;
 const Content = tw.div`max-w-screen-xl mx-auto py-16 lg:py-20`;
 
@@ -71,7 +73,7 @@ export default () => {
   const [sliderRef, setSliderRef] = useState(null);
   const sliderSettings = {
     arrows: false,
-    slidesToShow: 3,
+    slidesToShow: 5,
     responsive: [
       {
         breakpoint: 1280,
@@ -93,7 +95,7 @@ export default () => {
   useEffect(() => {
     const fetchData = async () => {
         try {
-            const response = await fetch('http://localhost:3001/produits'); // Remplacez par l'URL réelle de votre API
+            const response = await fetch('http://localhost:3001/categories'); // Remplacez par l'URL réelle de votre API
             const data = await response.json();
             console.log(data);
             setCards(data);
@@ -108,7 +110,7 @@ export default () => {
     <Container>
       <Content>
         <HeadingWithControl>
-          <Heading>Annonces populaires</Heading>
+          <Heading>Toutes les catégories</Heading>
           <Controls>
             <PrevButton onClick={sliderRef?.slickPrev}><ChevronLeftIcon/></PrevButton>
             <NextButton onClick={sliderRef?.slickNext}><ChevronRightIcon/></NextButton>
@@ -117,29 +119,12 @@ export default () => {
         <CardSlider ref={setSliderRef} {...sliderSettings}>
           {cards.map((card, index) => (
             <Card key={index}>
-              <CardImage imageSrc={card.imageSrc} />
               <TextInfo>
                 <TitleReviewContainer>
-                  <Title>{card.title}</Title>
-                  <RatingsInfo>
-                    <StarIcon />
-                    <Rating>{card.rating}</Rating>
-                  </RatingsInfo>
+                  <Title>{card.nom}</Title>
                 </TitleReviewContainer>
-                <SecondaryInfoContainer>
-                  <IconWithText>
-                    <IconContainer>
-                      <LocationIcon />
-                    </IconContainer>
-                    <Text>{card.locationText}</Text>
-                  </IconWithText>
-                  <IconWithText>
-                    <Text>{card.nbPar} / {card.nbParMax} participants </Text>
-                  </IconWithText>
-                </SecondaryInfoContainer>
-                <Description>{card.description}</Description>
               </TextInfo>
-              <PrimaryButton>Voir en détail</PrimaryButton>
+              <PrimaryButton>Voir les annonces</PrimaryButton>
             </Card>
           ))}
         </CardSlider>

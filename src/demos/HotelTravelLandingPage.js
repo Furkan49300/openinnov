@@ -10,16 +10,18 @@ import Testimonial from "components/testimonials/TwoColumnWithImageAndProfilePic
 import FAQ from "components/faqs/SimpleWithSideImage.js";
 import SubscribeNewsLetterForm from "components/forms/SimpleSubscribeNewsletter.js";
 import Footer from "components/footers/MiniCenteredFooter.js";
+import CategoriesCard from "components/cards/categories.js";
 
 export default () => (
   <AnimationRevealPage>
     <Hero />
-    <Features />
     <SliderCard />
+    <CategoriesCard />
     <TrendingCard />
     <MainFeature />
     <Blog />
     <Testimonial textOnLeft={true}/>
+    <Features />
     <FAQ />
     <SubscribeNewsLetterForm />
     <Footer />
